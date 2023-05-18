@@ -1,12 +1,16 @@
-import { FC } from 'react'
-import { Button } from "antd";
+import { CSSProperties, FC } from 'react'
+import { Space } from "antd";
+import LoginForm from './components/LoginForm';
+
+const spaceStyles: CSSProperties = {
+  width: '35%'
+};
 
 const SignInPage: FC = () => {
   return (
-    <div>
-      SignInPage
-      <Button>Hello World</Button>
-    </div>
+    <Space direction="vertical" size="middle" style={spaceStyles}>
+      <LoginForm />
+    </Space>
   );
 }
 
