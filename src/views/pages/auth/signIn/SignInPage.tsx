@@ -1,16 +1,22 @@
 import { CSSProperties, FC } from 'react'
-import { Space } from "antd";
+import { Space, Col, Row } from "antd";
 import LoginForm from './components/LoginForm';
+import { Content } from 'antd/es/layout/layout';
 
 const spaceStyles: CSSProperties = {
-  width: '35%'
+  width: '100%'
 };
 
 const SignInPage: FC = () => {
   return (
-    <Space direction="vertical" size="middle" style={spaceStyles}>
-      <LoginForm />
-    </Space>
+    <section style={spaceStyles}>
+      <Row justify="center">
+        <Col sm={20} md={16} lg={12} xl={9} xxl={6}>
+          <LoginForm />
+        </Col>
+      </Row>
+    </section>
+
   );
 }
 
