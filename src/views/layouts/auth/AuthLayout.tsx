@@ -15,8 +15,8 @@ const contentStyle: CSSProperties = {
 
 const AuthLayout: FC = () => {
   return (
-    <Layout>
-      <Content style={contentStyle}>
+    <Layout style={contentStyle}>
+      <Content>
         <Outlet />
       </Content>
     </Layout>

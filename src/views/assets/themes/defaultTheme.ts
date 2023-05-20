@@ -5,5 +5,5 @@ export const defaultTheme = {
   token: {
     colorPrimary: "#13C2C2"
   },
-  algorithm: theme.darkAlgorithm,
+  // algorithm: theme.darkAlgorithm,
 };

@@ -2,12 +2,17 @@ import { FC } from 'react'
 import { Card, Button, Form, Input } from 'antd';
 import { useFormik } from 'formik';
 import { LOGIN_INITIAL_VALUES, LOGIN_VALIDATION_SCHEMA } from '../../../../../utils/validations/authValidations';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm: FC = () => {
+  const navigate = useNavigate()
   const { handleSubmit, handleChange, values, } = useFormik({
     initialValues: LOGIN_INITIAL_VALUES,
     validationSchema: LOGIN_VALIDATION_SCHEMA,
-    onSubmit: (values) => console.log(values)
+    onSubmit: (values) => {
+      console.log(values)
+      navigate('/home')
+    }
   })
 
   return (
