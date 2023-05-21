@@ -28,7 +28,7 @@ const columns: ColumnsType<Course> = [
   {
     title: 'Acciones',
     key: 'action',
-    render: (course: Course) => (
+    render: () => (
       <>
         <Button type="primary" shape="circle" icon={<EditOutlined />} style={{ marginRight: '.5rem' }} />
         <Button type="primary" danger shape="circle" icon={<DeleteOutlined />} style={{ marginRight: '.5rem' }} />
