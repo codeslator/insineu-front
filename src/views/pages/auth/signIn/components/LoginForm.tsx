@@ -13,7 +13,7 @@ const LoginForm: FC = () => {
       console.log(values)
       navigate('/home')
     }
-  })
+  });
 
   return (
     <Card title="Iniciar Sesion" headStyle={{ textAlign: 'center' }}>
@@ -36,7 +36,6 @@ const LoginForm: FC = () => {
           Submit
         </Button>
       </Form>
-
     </Card>
   );
 }

@@ -7,6 +7,11 @@ export enum PATHS {
   STUDENTS = 'students',
   ROLES = 'roles',
   PERMISSIONS = 'permissions',
+  COURSES = 'courses',
+  ENROLLMENTS = 'enrollments',
+  CITIES = 'cities',
+  QUESTIONS = 'questions',
+  ANSWERS = 'answers',
 }
 
 export enum ROUTES {
@@ -18,15 +23,25 @@ export enum ROUTES {
   STUDENTS = '/students',
   ROLES = '/roles',
   PERMISSIONS = '/permissions',
+  COURSES = '/courses',
+  ENROLLMENTS = '/enrollments',
+  CITIES = '/cities',
+  QUESTIONS = '/questions',
+  ANSWERS = '/answers',
 }
 
 export enum MENU_LABELS {
   // ROOT = '/',
-  HOME = 'Home',
+  HOME = 'Inicio',
   // AUTH = 'AUthentication',
-  USERS = 'Users',
-  TEACHERS = 'Teachers',
-  STUDENTS = 'Students',
+  USERS = 'Usuarios',
+  TEACHERS = 'Profesores',
+  STUDENTS = 'Estudiantes',
   ROLES = 'Roles',
-  PERMISSIONS = 'Permissions',
+  PERMISSIONS = 'Permisos',
+  COURSES = 'Cursos',
+  ENROLLMENTS = 'Inscripciones',
+  CITIES = 'Ciudades',
+  QUESTIONS = 'Preguntas',
+  ANSWERS = 'Respuestas',
 }

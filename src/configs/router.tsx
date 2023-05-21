@@ -1,6 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PATHS } from "./urls";
-import { HomePage, SignInPage, StudentsPage, TeachersPage, UsersPage } from "../views/pages";
+import {
+  AnswersPage,
+  CitiesPage,
+  CoursesPage,
+  EnrollmentsPage,
+  HomePage,
+  PermissionsPage,
+  QuestionsPage,
+  RolesPage,
+  SignInPage,
+  StudentsPage,
+  TeachersPage,
+  UsersPage
+} from "../views/pages";
 import { AppLayout, AuthLayout } from "../views/layouts";
 
 export const router = createBrowserRouter([
@@ -36,11 +49,27 @@ export const router = createBrowserRouter([
       },
       {
         path: PATHS.PERMISSIONS,
-        element: <HomePage />
+        element: <PermissionsPage />
       },
       {
-        path: PATHS.ROLES,
-        element: <HomePage />
+        path: PATHS.ENROLLMENTS,
+        element: <EnrollmentsPage />
+      },
+      {
+        path: PATHS.COURSES,
+        element: <CoursesPage />
+      },
+      {
+        path: PATHS.QUESTIONS,
+        element: <QuestionsPage />
+      },
+      {
+        path: PATHS.ANSWERS,
+        element: <AnswersPage />
+      },
+      {
+        path: PATHS.CITIES,
+        element: <CitiesPage />
       },
     ]
   },

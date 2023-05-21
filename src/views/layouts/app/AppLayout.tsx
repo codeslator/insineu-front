@@ -1,10 +1,15 @@
 import { CSSProperties, FC, useState } from 'react';
 import {
   BookOutlined,
+  CarryOutOutlined,
   ContactsOutlined,
+  ContainerOutlined,
+  FileDoneOutlined,
+  GlobalOutlined,
   HomeOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  ProjectOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, Row } from 'antd';
@@ -31,6 +36,11 @@ const items = [
     label: <Link to={ROUTES.USERS}>{MENU_LABELS.USERS}</Link>,
   },
   {
+    key: PATHS.ENROLLMENTS,
+    icon: <ProjectOutlined />,
+    label: <Link to={ROUTES.ENROLLMENTS}>{MENU_LABELS.ENROLLMENTS}</Link>,
+  },
+  {
     key: PATHS.STUDENTS,
     icon: <ContactsOutlined />,
     label: <Link to={ROUTES.STUDENTS}>{MENU_LABELS.STUDENTS}</Link>,
@@ -39,6 +49,26 @@ const items = [
     key: PATHS.TEACHERS,
     icon: <BookOutlined />,
     label: <Link to={ROUTES.TEACHERS}>{MENU_LABELS.TEACHERS}</Link>,
+  },
+  {
+    key: PATHS.COURSES,
+    icon: <CarryOutOutlined />,
+    label: <Link to={ROUTES.COURSES}>{MENU_LABELS.COURSES}</Link>,
+  },
+  {
+    key: PATHS.QUESTIONS,
+    icon: <FileDoneOutlined />,
+    label: <Link to={ROUTES.QUESTIONS}>{MENU_LABELS.QUESTIONS}</Link>,
+  },
+  {
+    key: PATHS.ANSWERS,
+    icon: <ContainerOutlined />,
+    label: <Link to={ROUTES.ANSWERS}>{MENU_LABELS.ANSWERS}</Link>,
+  },
+  {
+    key: PATHS.CITIES,
+    icon: <GlobalOutlined />,
+    label: <Link to={ROUTES.CITIES}>{MENU_LABELS.CITIES}</Link>,
   },
 ]
 
