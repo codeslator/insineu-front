@@ -5,7 +5,7 @@ import { Card, Col, Row, Statistic } from 'antd';
 const HomePage: FC = () => {
   return (
     <Row gutter={16}>
-      <Col span={6}>
+      <Col xs={24} md={12} lg={6} style={{ marginBottom: '1rem' }}>
         <Card bordered={false}>
           <Statistic
             title="Nuevos Estudiantes"
@@ -17,7 +17,7 @@ const HomePage: FC = () => {
           />
         </Card>
       </Col>
-      <Col span={6}>
+      <Col xs={24} md={12} lg={6} style={{ marginBottom: '1rem' }}>
         <Card bordered={false}>
           <Statistic
             title="Nuevos Profesores"

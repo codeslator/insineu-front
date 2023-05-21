@@ -47,7 +47,7 @@ const StudentsPage: FC = () => {
         <Title level={2}>Módulo de {MENU_LABELS.STUDENTS}</Title>
       </div>
       <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolorum suscipit inventore laboriosam accusamus numquam quasi, modi voluptatum consectetur dolorem!</Text>
-      <Table columns={columns} dataSource={students} />
+      <Table columns={columns} dataSource={students} scroll={{ x: 500 }} />
     </Space>
   );
 }

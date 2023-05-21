@@ -65,7 +65,7 @@ const EnrollmentsPage: FC = () => {
         </Modal>
       </div>
       <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolorum suscipit inventore laboriosam accusamus numquam quasi, modi voluptatum consectetur dolorem!</Text>
-      <Table columns={columns} dataSource={enrollments} />
+      <Table columns={columns} dataSource={enrollments} scroll={{ x: 500 }} />
     </Space>
   );
 }

@@ -28,6 +28,7 @@ export interface User {
   status: number;
   person?: Person;
   role_id: number;
+  qr_code?: string;
   created_at?: Date;
 }
 
@@ -70,5 +71,35 @@ export interface Institution {
   name: string;
   address: string;
   city_id: number;
+  created_at?: Date;
+}
+
+export interface Question {
+  id?: string | number;
+  text: string;
+  created_at?: Date;
+}
+
+export interface Answer {
+  id?: string | number;
+  text: string;
+  enrollment: Enrollment;
+  question: Question;
+  created_at?: Date;
+}
+
+export interface Cities {
+  id?: string | number;
+  name: string;
+  country: Country;
+  created_at?: Date;
+}
+
+export interface Country {
+  id?: string | number;
+  name: string;
+  abbreviation: string;
+  prefix: string;
+  status: number;
   created_at?: Date;
 }
