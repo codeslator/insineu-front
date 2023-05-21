@@ -1,7 +1,8 @@
 export interface PersonType {
-  id: string | number;
+  id?: string | number;
   name: string;
   description: string;
+  created_at?: Date;
 }
 
 export interface Person {
@@ -16,14 +17,58 @@ export interface Person {
   status: number;
   city_id: number;
   type: PersonType;
+  created_at?: Date;
 }
 
 export interface User {
-  id: string | number;
+  id?: string | number;
   username?: string;
   email: string;
   password?: string;
   status: number;
   person?: Person;
   role_id: number;
+  created_at?: Date;
+}
+
+export interface StudentDetail {
+  id?: string | number;
+  code: string;
+  person: Person;
+  institution: Institution;
+  created_at?: Date;
+}
+
+
+export interface TeacherDetail {
+  id?: string | number;
+  code: string;
+  person: Person;
+  created_at?: Date;
+}
+
+export interface Course {
+  id?: string | number;
+  name: string;
+  description: string;
+  code: string;
+  created_at?: Date;
+}
+
+export interface Enrollment {
+  id?: string | number;
+  student: StudentDetail;
+  teacher: TeacherDetail;
+  course: Course;
+  start_date: Date;
+  end_date: Date;
+  created_at?: Date;
+}
+
+export interface Institution {
+  id?: string | number;
+  name: string;
+  address: string;
+  city_id: number;
+  created_at?: Date;
 }

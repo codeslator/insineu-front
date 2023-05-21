@@ -22,7 +22,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
       <Row gutter={16}>
         <Col span={12}>
           <Form.Item
-            label="First Name"
+            label="Nombres"
             name="first_name"
             rules={[{ required: true, message: 'Please input your firstname!' }]}
             style={{ marginBottom: '.5em' }}
@@ -32,7 +32,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Last Name"
+            label="Apellidos"
             name="last_name"
             rules={[{ required: true, message: 'Please input your last name!' }]}
             style={{ marginBottom: '.5em' }}
@@ -52,7 +52,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Password"
+            label="Contraseña"
             name="password"
             rules={[{ required: true, message: 'Please input your password!' }]}
             style={{ marginBottom: '.5em' }}
@@ -62,7 +62,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Document ID"
+            label="Documento de Identidad"
             name="document_id"
             rules={[{ required: true, message: 'Please input your document!' }]}
             style={{ marginBottom: '.5em' }}
@@ -72,7 +72,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Phone"
+            label="Teléfono"
             name="phone"
             rules={[{ required: true, message: 'Please input your phone!' }]}
             style={{ marginBottom: '.5em' }}
@@ -82,7 +82,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Birth Date"
+            label="Fecha de Nacimiento"
             name="birth_date"
             rules={[{ required: true, message: 'Please input your birth date!' }]}
             style={{ marginBottom: '.5em' }}
@@ -92,7 +92,7 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Person Type"
+            label="Tipo de Persona"
             name="type_id"
             style={{ marginBottom: '.5em' }}
             rules={[{ required: true, message: 'Please input your type!' }]}
@@ -109,6 +109,26 @@ const UserForm: FC<UserFormProps> = ({ onClose }) => {
             />
           </Form.Item>
         </Col>
+        {(typeof values.type_id === 'number' && values.type_id === 2) && (
+          <Col span={24}>
+            <Form.Item
+              label="Institución"
+              name="institution_id"
+              style={{ marginBottom: '.5em' }}
+              rules={[{ required: true, message: 'Please input your type!' }]}
+            >
+              <Select
+                onChange={(value) => {
+                  setFieldValue('institution_id', value)
+                }}
+                options={[
+                  { value: 1, label: 'Hospital Antonio Maria Pineda (HAMP)' },
+                  { value: 2, label: 'Hospital Universitario de Pediatria Agustin Zubillaga (HUPAZ)' },
+                ]}
+              />
+            </Form.Item>
+          </Col>
+        )}
         <Col span={12}>
           <Form.Item
             label="Role"

@@ -5,47 +5,43 @@ import { User } from '../../../../../configs/interfaces';
 import { users } from '../../../../../apis/data/userData';
 import { DeleteOutlined, EditOutlined, FormOutlined } from '@ant-design/icons';
 import UserForm from './components/UserForm';
+import { MENU_LABELS } from '../../../../../configs/urls';
 
 const { Title, Text } = Typography;
 
 const columns: ColumnsType<User> = [
   {
-    title: 'Fullname',
-    // dataIndex: 'full_name',
+    title: 'Nombre Completo',
     key: 'full_name',
     render: (user: User) => <span>{`${user.person?.first_name} ${user.person?.last_name}`}</span>,
   },
   {
-    title: 'Document',
-    // dataIndex: 'address',
+    title: 'Documento de Identidad',
     key: 'document',
-    render: (user: User) => <span>{user.person.document_id}</span>,
+    render: (user: User) => <span>{user.person?.document_id}</span>,
   },
   {
     title: 'E-mail',
-    // dataIndex: 'email',
     key: 'email',
     render: (user: User) => <span>{user.email}</span>,
 
   },
   {
-    title: 'Phone',
-    // dataIndex: 'address',
+    title: 'Teléfono',
     key: 'phone',
-    render: (user: User) => <span>{user.person.phone}</span>,
+    render: (user: User) => <span>{user.person?.phone}</span>,
   },
   {
-    title: 'Type',
+    title: 'Tipo de Persona',
     key: 'type',
-    // dataIndex: 'id',
     render: (user: User) => (
-      <Tag color={user.person.type.id === 1 ? 'green' : 'geekblue'} key={user.person.type.id}>
-        {user.person.type.name}
+      <Tag color={user.person?.type.id === 1 ? 'green' : 'geekblue'} key={user.person?.type.id}>
+        {user.person?.type.name}
       </Tag>
     ),
   },
   {
-    title: 'Action',
+    title: 'Acciones',
     key: 'action',
     render: (user: User) => (
       <>
@@ -64,13 +60,12 @@ const UsersPage: FC = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log(users)
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Title level={2}>Users</Title>
+        <Title level={2}>Módulo de {MENU_LABELS.USERS}</Title>
         <Button type="primary" shape="circle" icon={<FormOutlined />} onClick={handleOpen} />
-        <Modal title="Create new User" open={isOpen} footer={null} onCancel={handleOpen}>
+        <Modal title="Crear nuevo Usuario" open={isOpen} footer={null} onCancel={handleOpen}>
           <UserForm onClose={handleOpen} />
         </Modal>
       </div>
