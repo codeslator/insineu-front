@@ -52,6 +52,10 @@ export const router = createBrowserRouter([
         element: <PermissionsPage />
       },
       {
+        path: PATHS.ROLES,
+        element: <RolesPage />
+      },
+      {
         path: PATHS.ENROLLMENTS,
         element: <EnrollmentsPage />
       },

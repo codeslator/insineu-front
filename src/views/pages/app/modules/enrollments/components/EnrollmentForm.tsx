@@ -99,7 +99,7 @@ const EnrollmentForm: FC<EnrollmentFormProps> = ({ onClose }) => {
         </Col>
       </Row>
       <Button type="primary" htmlType="submit" block style={{ marginTop: '1rem' }}>
-        Submit
+        Guardar
       </Button>
     </Form>
   );

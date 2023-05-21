@@ -18,7 +18,7 @@ const columns: ColumnsType<Question> = [
   {
     title: 'Acciones',
     key: 'action',
-    render: (question: Question) => (
+    render: () => (
       <>
         <Button type="primary" shape="circle" icon={<EditOutlined />} style={{ marginRight: '.5rem' }} />
         <Button type="primary" danger shape="circle" icon={<DeleteOutlined />} style={{ marginRight: '.5rem' }} />

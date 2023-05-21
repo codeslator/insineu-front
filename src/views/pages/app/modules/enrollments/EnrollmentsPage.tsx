@@ -39,7 +39,7 @@ const columns: ColumnsType<Enrollment> = [
   {
     title: 'Action',
     key: 'action',
-    render: (enrollment: Enrollment) => (
+    render: () => (
       <>
         <Button type="primary" shape="circle" icon={<EditOutlined />} style={{ marginRight: '.5rem' }} />
         <Button type="primary" danger shape="circle" icon={<DeleteOutlined />} style={{ marginRight: '.5rem' }} />

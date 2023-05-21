@@ -26,14 +26,14 @@ const LoginForm: FC = () => {
           <Input type="email" onChange={handleChange} value={values.email} />
         </Form.Item>
         <Form.Item
-          label="Password"
+          label="Contraseña"
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input.Password onChange={handleChange} value={values.password} />
         </Form.Item>
         <Button type="primary" htmlType="submit" block>
-          Submit
+          Ingresar
         </Button>
       </Form>
     </Card>

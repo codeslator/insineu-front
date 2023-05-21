@@ -50,7 +50,7 @@ const UsersPage: FC = () => {
     {
       title: 'Acciones',
       key: 'action',
-      render: (user: User) => (
+      render: () => (
         <>
           <Button type="primary" shape="circle" icon={<EditOutlined />} style={{ marginRight: '.5rem' }} />
           <Button type="primary" danger shape="circle" icon={<DeleteOutlined />} style={{ marginRight: '.5rem' }} />
