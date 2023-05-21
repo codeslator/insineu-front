@@ -4,6 +4,7 @@ import type { ColumnsType } from 'antd/es/table';
 import { MENU_LABELS } from '../../../../../configs/urls';
 import { students } from '../../../../../apis/data/studentData';
 import { StudentDetail } from '../../../../../configs/interfaces';
+import QrModal from './components/QrModal';
 
 const { Title, Text } = Typography;
 
@@ -37,6 +38,11 @@ const columns: ColumnsType<StudentDetail> = [
     title: 'Institución',
     key: 'institution',
     render: (student: StudentDetail) => <span>{student.institution.name}</span>,
+  },
+  {
+    title: 'Código QR',
+    key: 'qr_code',
+    render: (student: StudentDetail) => (<QrModal student={student} />),
   },
 ];
 

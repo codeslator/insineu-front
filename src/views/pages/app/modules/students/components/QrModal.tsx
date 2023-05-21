@@ -1,15 +1,15 @@
 import { FC, useState } from 'react'
-import { User } from '../../../../../../configs/interfaces'
+import { StudentDetail } from '../../../../../../configs/interfaces'
 import { QrcodeOutlined } from '@ant-design/icons';
 import { Button, Modal, QRCode } from 'antd';
 
 interface QrModalProps {
-  user: User;
+  student: StudentDetail;
 }
 
-const QrModal: FC<QrModalProps> = ({ user }) => {
+const QrModal: FC<QrModalProps> = ({ student }) => {
   const [isOpenQR, setIsOpenQR] = useState<boolean>(false);
-  const [qrText] = useState<string>(`http://localhost:5173/${JSON.stringify(user)}`)
+  const [qrText] = useState<string>(`http://localhost:5173/${JSON.stringify(student)}`)
   
   const handleOpenQR = () => {
     setIsOpenQR(!isOpenQR);
@@ -21,7 +21,7 @@ const QrModal: FC<QrModalProps> = ({ user }) => {
         Ver QR
       </Button>
       <Modal
-        title={`QR del ${user.person?.type.name} - ${user.person?.first_name} ${user.person?.last_name}`}
+        title={`QR del ${student.person.type.name} - ${student.person.first_name} ${student.person.last_name}`}
         centered
         open={isOpenQR}
         footer={false}

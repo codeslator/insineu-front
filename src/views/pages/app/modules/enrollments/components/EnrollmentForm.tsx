@@ -20,7 +20,7 @@ const EnrollmentForm: FC<EnrollmentFormProps> = ({ onClose }) => {
   return (
     <Form onFinish={handleSubmit} layout="vertical" autoComplete="off">
       <Row gutter={16}>
-      <Col span={24}>
+        <Col span={24}>
           <Form.Item
             label="Curso"
             name="course_id"

@@ -88,7 +88,7 @@ export interface Answer {
   created_at?: Date;
 }
 
-export interface Cities {
+export interface City {
   id?: string | number;
   name: string;
   country: Country;

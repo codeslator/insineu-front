@@ -7,13 +7,14 @@ import {
   FileDoneOutlined,
   GlobalOutlined,
   HomeOutlined,
+  LogoutOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   ProjectOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, Row } from 'antd';
-import { Link, Outlet } from 'react-router-dom';
+import { Layout, Menu, Button } from 'antd';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { MENU_LABELS, PATHS, ROUTES } from '../../../configs/urls';
 
 const { Header, Sider, Content } = Layout;
@@ -74,6 +75,7 @@ const items = [
 
 const AppLayout: FC = () => {
   const [collapsed, setCollapsed] = useState<boolean>(true);
+  const navigate = useNavigate();
   return (
     <Layout style={contentStyle}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -100,11 +102,22 @@ const AppLayout: FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0 }}>
+        <Header style={{ padding: 0, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
+            style={{
+              fontSize: '20px',
+              width: 64,
+              height: 64,
+              color: '#fff'
+            }}
+          />
+          <Button
+            type="text"
+            icon={<LogoutOutlined />}
+            onClick={() => navigate(PATHS.ROOT)}
             style={{
               fontSize: '20px',
               width: 64,

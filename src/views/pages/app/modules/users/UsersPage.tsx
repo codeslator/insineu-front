@@ -6,7 +6,6 @@ import { users } from '../../../../../apis/data/userData';
 import { DeleteOutlined, EditOutlined, FormOutlined } from '@ant-design/icons';
 import UserForm from './components/UserForm';
 import { MENU_LABELS } from '../../../../../configs/urls';
-import QrModal from './components/QrModal';
 
 const { Title, Text } = Typography;
 
@@ -47,11 +46,6 @@ const UsersPage: FC = () => {
           {user.person?.type.name}
         </Tag>
       ),
-    },
-    {
-      title: 'Código QR',
-      key: 'qr_code',
-      render: (user: User) => (<QrModal user={user} />),
     },
     {
       title: 'Acciones',
